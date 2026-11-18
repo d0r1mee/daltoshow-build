@@ -1,7 +1,25 @@
 # Daltoshow — сборка
 
-Глава 1. Unreal Engine 5.3.
+Глава 1. Unreal Engine 5.3, Windows 10/11 (64-бит).
 
-## Windows
-Скачать папку `Windows` целиком и запустить `Windows/Making_Game_On_Unity.exe`.
-Большие файлы хранятся в Git LFS: перед клонированием установи `git lfs`.
+## Версии
+
+| Папка | Для кого | Графика |
+|---|---|---|
+| `Windows_LowSpec` | ноутбуки со встроенной графикой | низкие настройки, текстуры до 1024, без виртуальных теней, 60 FPS |
+| `Windows_HighQuality` | ПК с дискретной видеокартой | максимальные настройки, текстуры до 2048 |
+
+Запуск: `<папка>/Making_Game_On_Unity.exe`.
+
+## Как скачать
+
+Большие файлы хранятся в Git LFS, поэтому кнопка Download ZIP не подходит.
+
+```
+git lfs install
+git clone https://github.com/d0r1mee/daltoshow-build.git
+```
+
+Проверка: `git lfs ls-files` — у всех файлов должна стоять `*`. Если стоит `-`, выполни `git lfs pull`.
+
+Если раньше запускалась другая версия, перед запуском удали `%LOCALAPPDATA%\Making_Game_On_Unity`, чтобы сбросить сохранённые настройки графики.
